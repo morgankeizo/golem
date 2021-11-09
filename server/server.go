@@ -13,7 +13,7 @@ const (
 // StopCommand is the Minecraft server stop command.
 const StopCommand = "stop"
 
-// Server is the interface that defines a server supervisor.
+// Server is the interface that defines a server manager.
 type Server interface {
 	Start() error
 	Stop() error

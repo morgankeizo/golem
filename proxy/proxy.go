@@ -152,7 +152,7 @@ func (p *Proxy) handleConnection(conn *protocol.ClientConn) {
 			return
 		case serverPkg.Stopped:
 
-			// Start server is autostart/stop enabled
+			// Start server if autostart/stop enabled
 			if p.stopDuration != nil {
 				p.logger.Println("starting server")
 				err = p.server.Start()

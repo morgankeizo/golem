@@ -13,8 +13,7 @@ import (
 	serverPkg "golem/server"
 )
 
-// A ProcessServer implements server.Server by
-// supervising a process.
+// A ProcessServer implements server.Server by supervising a process.
 type ProcessServer struct {
 	state serverPkg.ServerState
 

@@ -52,7 +52,7 @@ func main() {
 	var server serverPkg.Server
 	var timeDuration *time.Duration
 	if serverStart == "" {
-		server = serverPkg.NewDummyServer()
+		server = serverPkg.NewBasicServer()
 	} else {
 		server = process.NewProcessServer(
 			newLogger("[server] "),
@@ -96,7 +96,7 @@ func main() {
 	// Run proxy
 	err := proxy.Run()
 	if err != nil {
-		fmt.Println(err)
+		fmt.Printf("error starting proxy: %s\n", err)
 	}
 
 }

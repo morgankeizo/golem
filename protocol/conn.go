@@ -8,21 +8,21 @@ import (
 	"golem/protocol/protocol"
 )
 
-// BytesReader is the interface that wraps the ReadBytes method,
-// similar to ReadByte in io.ByteReader.
+// BytesReader is the interface that wraps the ReadBytes method, similar to
+// ReadByte in io.ByteReader.
 type BytesReader interface {
 	ReadBytes(int) ([]byte, error)
 }
 
-// A ClientConn implements io.Reader, io.ByteReader, BytesReader,
-// io.Writer, and io.Closer by wrapping a net.Conn.
+// A ClientConn implements io.Reader, io.ByteReader, BytesReader, io.Writer,
+// and io.Closer by wrapping a net.Conn.
 type ClientConn struct {
 	conn   net.Conn
 	logger *log.Logger
 }
 
-// NewClientConn returns a new ClientConn from a net.Conn
-// and an optional packet logger for debugging.
+// NewClientConn returns a new ClientConn from a net.Conn and an optional
+// packet logger for debugging.
 func NewClientConn(conn net.Conn, logger *log.Logger) *ClientConn {
 	c := ClientConn{}
 	c.conn = conn
