@@ -87,7 +87,7 @@ func (p *Proxy) handleConnection(conn *protocol.ClientConn) {
 	// Read handshake packet
 	handshakePacket, err := conn.ReadHandshakePacket()
 	if err != nil {
-		p.logger.Printf("error reading handshape packet: %s\n", err)
+		p.logger.Printf("error reading handshake packet: %s\n", err)
 		return
 	}
 
